@@ -11,7 +11,7 @@ const Card = ({ groupname, members, desc, groupIcon, groupId }) => {
   }
 
   async function handleLeave() {
-    const url = `https://gleqbackend-production.up.railway.app/user/leavegroup/${groupId}`;
+    const url = `http://localhost:2027/user/leavegroup/${groupId}`;
     const jtoken = localStorage.getItem("studysync_token");
 
     try {

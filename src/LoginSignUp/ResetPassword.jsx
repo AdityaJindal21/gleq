@@ -39,7 +39,7 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
-        let url = `https://gleqbackend-production.up.railway.app/saveuser/doresetpassword`;
+        let url = `http://localhost:2027/saveuser/doresetpassword`;
         const resp = await axios.post(url,formData,{headers:{
                     'Content-Type' : 'application/x-www-form-urlencoded'
                 }})

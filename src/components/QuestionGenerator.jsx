@@ -15,7 +15,7 @@ const [selectedPdf, setSelectedPdf] = useState(null);
 
   const fetchUploadedPDFs = async () => {
     try {
-      const res = await axios.get(`https://gleqbackend-production.up.railway.app/pdf/group/${groupId}`);
+      const res = await axios.get(`http://localhost:2027/pdf/group/${groupId}`);
       if (res.data.status) {
         setUploadedPDFs(res.data.doc);
       }
@@ -40,7 +40,7 @@ const [selectedPdf, setSelectedPdf] = useState(null);
     if (!selectedPdf) return;
     setLoading(true);
     try {
-       const resp = await axios.post("https://gleqbackend-production.up.railway.app/pdf/generatequestion",selectedPdf,{
+       const resp = await axios.post("http://localhost:2027/pdf/generatequestion",selectedPdf,{
             headers:{
                     'Content-Type' : 'application/x-www-form-urlencoded'
                 }

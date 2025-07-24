@@ -17,7 +17,7 @@ const CalendarPage = () => {
   };
 
  const fetchEvents = async () => {
-  let url = `https://gleqbackend-production.up.railway.app/event/dogetevents`;
+  let url = `http://localhost:2027/event/dogetevents`;
   let token = localStorage.getItem("studysync_token");
   const resp = await axios.post(url, {}, {
     headers: {
@@ -51,7 +51,7 @@ useEffect(() => {
     return;
   }
 
-  let url = `https://gleqbackend-production.up.railway.app/event/dosaveevent`;
+  let url = `http://localhost:2027/event/dosaveevent`;
   let obj={
     date:key,
     title:eventData.title,

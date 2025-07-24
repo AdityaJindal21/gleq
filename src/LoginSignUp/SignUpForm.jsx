@@ -24,7 +24,7 @@ const SignUpForm = ({ closeModel, openModalLogin }) => {
   }
 
   async function dosaveuser() {
-    let url = `https://gleqbackend-production.up.railway.app/saveuser/registeruser`;
+    let url = `http://localhost:2027/saveuser/registeruser`;
     var userinfo = {
       name: obj.name,
       email: obj.email,

@@ -13,7 +13,7 @@ const MarkdownEditor = ({ groupId }) => {
    useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const res = await axios.get(`https://gleqbackend-production.up.railway.app/markdown/getcontent/${groupId}`, {
+        const res = await axios.get(`http://localhost:2027/markdown/getcontent/${groupId}`, {
           headers: {'Content-Type' : 'application/x-www-form-urlencoded'}
         });
         if (res.data.status) {
@@ -28,7 +28,7 @@ const MarkdownEditor = ({ groupId }) => {
   }, [groupId]);
 
   const handleSave = async () => {
-    let url = `https://gleqbackend-production.up.railway.app/markdown/dosavecontent`;
+    let url = `http://localhost:2027/markdown/dosavecontent`;
     const resp = await axios.post(url,obj,{ headers:{ 'Content-Type' : 'application/x-www-form-urlencoded'}});
     if(resp.data.status) 
       {

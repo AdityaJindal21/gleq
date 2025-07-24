@@ -29,7 +29,7 @@ const Grouppage = () => {
   useEffect(() => {
     async function FetchGroupDetails() {
       try {
-        const url = `https://gleqbackend-production.up.railway.app/user/get-group?groupId=${groupId}`;
+        const url = `http://localhost:2027/user/get-group?groupId=${groupId}`;
         const resp = await axios.get(url);
         if (resp.data.status) setGroupData(resp.data.group);
         else alert(resp.data.msg);

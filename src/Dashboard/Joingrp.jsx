@@ -18,7 +18,7 @@ const Joingrp = ({JoinGroupModel, fetchpods, useremail}) => {
     }
 
     async function JoinGroup() {
-        let url = `https://gleqbackend-production.up.railway.app/user/join-group`;
+        let url = `http://localhost:2027/user/join-group`;
          let resp = await axios.post(url,obj,{
             headers:{
                 'Content-Type' : 'application/x-www-form-urlencoded'
