@@ -64,7 +64,7 @@ const LoginForm = ({ closeModellogin, openModalSignUp }) => {
     <div>
       <h2 className="text-2xl font-bold text-center mb-6 text-blue-900">Welcome Back</h2>
     <form className="space-y-6 bg-white p-8 rounded-lg shadow-lg border max-w-md w-full mx-auto">
-      <h2 className="text-3xl font-semibold text-center text-blue-950 mb-6">Login to StudySync</h2>
+      <h2 className="text-3xl font-semibold text-center text-blue-950 mb-6">Login to Gleq</h2>
 
      
       <div>
