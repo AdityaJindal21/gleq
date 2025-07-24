@@ -30,7 +30,7 @@ const ChangePasswordForm = () => {
 
     setLoading(true);
     try {
-        let url = `http://localhost:2027/saveuser/dochangepassword`;
+        let url = `https://gleqbackend-production.up.railway.app/saveuser/dochangepassword`;
         let jtoken = localStorage.getItem('studysync_token');
         const resp = await axios.post(url,formData,{headers:{
                     'Content-Type' : 'application/x-www-form-urlencoded',

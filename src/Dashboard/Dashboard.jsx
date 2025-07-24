@@ -27,7 +27,7 @@ const Dashboard = () => {
 
 
   async function fetchallpods() {
-    let url = `http://localhost:2027/user/getallpods`;
+    let url = `https://gleqbackend-production.up.railway.app/user/getallpods`;
     let jtoken = localStorage.getItem('studysync_token');
     const serverdata = await axios.post(url,{},{ headers:{"authorization" : `Bearer ${jtoken}`}});
     if(serverdata.data.status) 
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
   async function CheckNameAvailibility(val)
   {
-      let url = `http://localhost:2027/user/CheckNameAvailibility?GroupName=${val}`;
+      let url = `https://gleqbackend-production.up.railway.app/user/CheckNameAvailibility?GroupName=${val}`;
       let resp = await axios.get(url)
       if(resp.data.Availibility==false && resp.data.status==true) setgroupNameAvailibility(false);
       else if(resp.data.Availibility==true && resp.data.status==true)  setgroupNameAvailibility(true);
@@ -96,7 +96,7 @@ const Dashboard = () => {
     {
       fd.append(prop,obj[prop])
     }
-    let url = `http://localhost:2027/user/create-study-pod`;
+    let url = `https://gleqbackend-production.up.railway.app/user/create-study-pod`;
     let resp = await axios.post(url,fd,{
             headers:{
                 'Content-Type' : 'multipart/form-data'

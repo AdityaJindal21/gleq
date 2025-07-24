@@ -20,7 +20,7 @@ export default function ForgotPassword() {
       return;
     }
     setStep(2);
-    let url = `http://localhost:2027/saveuser/sendotp?email=${email}`;
+    let url = `https://gleqbackend-production.up.railway.app/saveuser/sendotp?email=${email}`;
     const resp = await axios.get(url);
     if(resp.data.status)
     {
@@ -39,7 +39,7 @@ export default function ForgotPassword() {
       setError("Please enter the OTP.");
       return;
     }
-    let url = `http://localhost:2027/saveuser/verifyotp?email=${email}&otp=${otp}`
+    let url = `https://gleqbackend-production.up.railway.app/saveuser/verifyotp?email=${email}&otp=${otp}`
     const resp = await axios.get(url);
     if(resp.data.status)
     {
