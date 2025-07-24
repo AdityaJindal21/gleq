@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
-const socket = io.connect("http://localhost:2027");
+const socket = io.connect("https://gleqbackend-production.up.railway.app");
 
 const ChatBox = ({ groupId, minimized, toggle }) => {
   const [message, setMessage] = useState("");
@@ -20,7 +20,7 @@ const ChatBox = ({ groupId, minimized, toggle }) => {
     socket.emit("joinGroup", groupId);
 
     
-    axios.get(`http://localhost:2027/chat/${groupId}`).then(res => {
+    axios.get(`https://gleqbackend-production.up.railway.app/chat/${groupId}`).then(res => {
       if (res.data.status) setMessages(res.data.messages);
     });
 

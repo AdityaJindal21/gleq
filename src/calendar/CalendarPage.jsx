@@ -17,7 +17,7 @@ const CalendarPage = () => {
   };
 
  const fetchEvents = async () => {
-  let url = `http://localhost:2027/event/dogetevents`;
+  let url = `https://gleqbackend-production.up.railway.app/event/dogetevents`;
   let token = localStorage.getItem("studysync_token");
   const resp = await axios.post(url, {}, {
     headers: {
@@ -51,7 +51,7 @@ useEffect(() => {
     return;
   }
 
-  let url = `http://localhost:2027/event/dosaveevent`;
+  let url = `https://gleqbackend-production.up.railway.app/event/dosaveevent`;
   let obj={
     date:key,
     title:eventData.title,
@@ -75,7 +75,7 @@ const handleDeleteEvent = async (event) => {
   const confirmDelete = window.confirm(`Are you sure you want to delete "${event.title}" at ${event.time}?`);
   if (!confirmDelete) return;
 
-  let url = `http://localhost:2027/event/dodeleteevent`;
+  let url = `https://gleqbackend-production.up.railway.app/event/dodeleteevent`;
   const obj = {
       date: key,
       title: event.title,
