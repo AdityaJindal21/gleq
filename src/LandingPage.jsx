@@ -150,7 +150,7 @@ const LandingPage = () => {
 
       
       <footer className="text-center py-6 text-sm text-gray-500 bg-gray-100">
-        © {new Date().getFullYear()} Gleq. All rights reserved.
+        © {new Date().getFullYear()} StudySync. All rights reserved.
       </footer>
 
      
