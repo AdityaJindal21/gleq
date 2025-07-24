@@ -1,0 +1,155 @@
+
+.react-calendar {
+  border: none;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  overflow: hidden;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.react-calendar__navigation__label {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.react-calendar__navigation__arrow {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  padding: 8px;
+  transition: background 0.2s ease;
+  border-radius: 8px;
+}
+
+.react-calendar__navigation__arrow:hover {
+  background: #e0f2fe;
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.react-calendar__tile {
+  border-radius: 12px;
+  padding: 12px 0;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.react-calendar__tile--now {
+  background: #e0f2fe;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.react-calendar__tile--active {
+  background: #1e3a8a; 
+  color: #ffffff;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.react-calendar__tile:hover {
+  background: #f1f5f9;
+  transform: scale(1.05);
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #dc2626;
+}
+
+.react-calendar__tile--hasActive {
+  background: #dbeafe;
+}
+
+.event-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  background: #34d399;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+.add-event-button {
+  background: #172554; 
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-event-button:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.event-modal {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 24px;
+}
+
+.event-modal input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.event-modal input:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.save-event-button {
+  background: #172554;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.save-event-button:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px);
+}
+
+.event-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
